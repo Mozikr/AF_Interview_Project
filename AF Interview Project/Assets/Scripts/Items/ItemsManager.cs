@@ -11,10 +11,18 @@
 		[SerializeField] private GameObject itemPrefab;
 		[SerializeField] private BoxCollider itemSpawnArea;
 		[SerializeField] private float itemSpawnInterval;
+		[SerializeField] private TextMeshProUGUI moneyText;
 
-		private float nextItemSpawnTime;
-		
-		private void Update()
+        private float nextItemSpawnTime;
+        private void Start()
+        {
+            if (moneyText == null)
+            {
+                Debug.LogError("Money Text not assigned!");
+            }
+        }
+
+        private void Update()
 		{
 			if (Time.time >= nextItemSpawnTime)
 				SpawnNewItem();
@@ -25,7 +33,7 @@
 			if (Input.GetKeyDown(KeyCode.Space))
 				inventoryController.SellAllItemsUpToValue(itemSellMaxValue);
 
-			FindObjectOfType<TextMeshProUGUI>().text = "Money: " + inventoryController.Money;
+			moneyText.text = "Money: " + inventoryController.Money;
 		}
 
 		private void SpawnNewItem()
