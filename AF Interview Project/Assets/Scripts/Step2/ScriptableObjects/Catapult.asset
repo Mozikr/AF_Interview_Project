@@ -15,6 +15,6 @@ MonoBehaviour:
   type: Catapult
   characterAttribute: 2
   health_points: 100
-  armor_points: 70
+  armor_points: 30
   attack_interval: 3
-  attack_damage: 25
+  attack_damage: 40

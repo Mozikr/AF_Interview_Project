@@ -1187,39 +1187,48 @@ MonoBehaviour:
     characters: {fileID: 11400000, guid: d942c462caa66fb4085778ecb4b04599, type: 2}
     body: {fileID: 1120630809}
     HP: {fileID: 721557229}
+    health_points: 0
   - Name: Long Sword Knight 02
-    characters: {fileID: 11400000, guid: a8380c5a88118d549aa6676690f5e7f4, type: 2}
+    characters: {fileID: 11400000, guid: d942c462caa66fb4085778ecb4b04599, type: 2}
     body: {fileID: 1595261371}
     HP: {fileID: 1555640284}
+    health_points: 0
   - Name: Druid
     characters: {fileID: 11400000, guid: f8f057b5d05094d48af945523526e6f4, type: 2}
     body: {fileID: 121785526}
     HP: {fileID: 568226952}
+    health_points: 0
   - Name: Ram
-    characters: {fileID: 11400000, guid: 3285fac039743334dbaf950adf34e371, type: 2}
+    characters: {fileID: 11400000, guid: 1a5cec5eec17a9f4d9e0ad15c3074fe4, type: 2}
     body: {fileID: 800575034}
     HP: {fileID: 1620046318}
+    health_points: 0
   army_02:
   - Name: Archer 01
     characters: {fileID: 11400000, guid: e359c4e51d77779489d98eba7d0bbb45, type: 2}
     body: {fileID: 1511370736}
     HP: {fileID: 1163275636}
+    health_points: 0
   - Name: Archer 02
-    characters: {fileID: 11400000, guid: 7e3049c7da4c39e4e970f9dfb4ee2a44, type: 2}
+    characters: {fileID: 11400000, guid: e359c4e51d77779489d98eba7d0bbb45, type: 2}
     body: {fileID: 628989126}
     HP: {fileID: 1896183981}
+    health_points: 0
   - Name: Archer 03
-    characters: {fileID: 11400000, guid: e542be398fd6a28498394245d46b6db4, type: 2}
+    characters: {fileID: 11400000, guid: e359c4e51d77779489d98eba7d0bbb45, type: 2}
     body: {fileID: 1020977449}
     HP: {fileID: 1904798476}
+    health_points: 0
   - Name: Catapult
     characters: {fileID: 11400000, guid: f419b67cd3dc9694baaa7a56f03436a8, type: 2}
     body: {fileID: 1801178847}
     HP: {fileID: 800955138}
+    health_points: 0
   - Name: Ram
     characters: {fileID: 11400000, guid: 1a5cec5eec17a9f4d9e0ad15c3074fe4, type: 2}
     body: {fileID: 1381421615}
     HP: {fileID: 1019286727}
+    health_points: 0
   Army_01: {fileID: 278868167}
   Army_02: {fileID: 1353391284}
   start: {fileID: 1867040515}

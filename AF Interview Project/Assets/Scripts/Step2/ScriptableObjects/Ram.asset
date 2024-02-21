@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc3164dedd0f7654a8392325f34fec7d, type: 3}
-  m_Name: LongSwordKnight01
+  m_Name: Ram
   m_EditorClassIdentifier: 
-  type: LongSwordKnight_01
-  characterAttribute: 1
+  type: Ram
+  characterAttribute: 0
   health_points: 100
-  armor_points: 100
-  attack_interval: 2
-  attack_damage: 45
+  armor_points: 2
+  attack_interval: 1
+  attack_damage: 10

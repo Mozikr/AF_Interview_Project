@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc3164dedd0f7654a8392325f34fec7d, type: 3}
-  m_Name: LongSwordKnight02
+  m_Name: Druid
   m_EditorClassIdentifier: 
-  type: LongSwordKnight_02
-  characterAttribute: 1
+  type: Druid
+  characterAttribute: 0
   health_points: 100
-  armor_points: 100
-  attack_interval: 2
-  attack_damage: 45
+  armor_points: 10
+  attack_interval: 1
+  attack_damage: 30

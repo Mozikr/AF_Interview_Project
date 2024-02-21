@@ -10,9 +10,8 @@ namespace AFSInterview
 
         [SerializeField] private string type;
         [SerializeField] private Attributes characterAttribute;
-        [SerializeField] public int health_points;
-        [SerializeField] private int armor_points;
-        [SerializeField] private int attack_interval;
+        [SerializeField] public int armor_points;
+        [SerializeField] public int attack_interval;
         [SerializeField] public int attack_damage;
     }
 }
