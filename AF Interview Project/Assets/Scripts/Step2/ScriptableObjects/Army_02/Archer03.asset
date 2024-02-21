@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc3164dedd0f7654a8392325f34fec7d, type: 3}
-  m_Name: Ram
+  m_Name: Archer03
   m_EditorClassIdentifier: 
-  type: Ram
-  health_points: 20
-  armor_points: 5
+  type: Archer01
+  characterAttribute: 0
+  health_points: 100
+  armor_points: 40
   attack_interval: 1
   attack_damage: 15

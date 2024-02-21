@@ -14,13 +14,6 @@
 		[SerializeField] private TextMeshProUGUI moneyText;
 
         private float nextItemSpawnTime;
-        private void Start()
-        {
-            if (moneyText == null)
-            {
-                Debug.LogError("Money Text not assigned!");
-            }
-        }
 
         private void Update()
 		{
@@ -32,8 +25,6 @@
 			
 			if (Input.GetKeyDown(KeyCode.Space))
 				inventoryController.SellAllItemsUpToValue(itemSellMaxValue);
-
-			moneyText.text = "Money: " + inventoryController.Money;
 		}
 
 		private void SpawnNewItem()
@@ -48,7 +39,7 @@
 			);
 			
 			Instantiate(itemPrefab, position, Quaternion.identity, itemSpawnParent);
-		}
+        }
 
 		private void TryPickUpItem()
 		{
@@ -61,5 +52,10 @@
             inventoryController.AddItem(item);
             Debug.Log("Picked up " + item.Name + " with value of " + item.Value + " and now have " + inventoryController.ItemsCount + " items");
 		}
+
+		public void SetMoneyString()
+		{
+            moneyText.text = "Money: " + inventoryController.Money;
+        }
 	}
 }
