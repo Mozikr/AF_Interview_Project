@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &117262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,16 +155,22 @@ MonoBehaviour:
   items:
   - name: Wooden shield
     value: 90
+    type: 1
   - name: Bow
     value: 150
+    type: 1
   - name: Mana Potion
     value: 60
+    type: 2
   - name: Sword
     value: 130
+    type: 0
   - name: Long Sword
     value: 160
+    type: 2
   - name: Plate Armor
     value: 300
+    type: 0
   money: 280
 --- !u!4 &117263
 Transform:
@@ -651,7 +657,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &226485278
 Transform:
   m_ObjectHideFlags: 0
@@ -3275,7 +3281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1201324633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6597,7 +6603,7 @@ PrefabInstance:
     - target: {fileID: 5839321131171676426, guid: 7a041ce5ffd8bd84698911e0d6a09812,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

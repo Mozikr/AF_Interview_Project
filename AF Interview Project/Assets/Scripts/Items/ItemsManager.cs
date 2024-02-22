@@ -25,7 +25,10 @@
 			
 			if (Input.GetKeyDown(KeyCode.Space))
 				inventoryController.SellAllItemsUpToValue(itemSellMaxValue);
-		}
+
+			if (Input.GetKeyDown(KeyCode.E))
+				inventoryController.UseItem();
+            }
 
 		private void SpawnNewItem()
 		{
