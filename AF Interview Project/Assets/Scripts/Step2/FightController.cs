@@ -15,10 +15,12 @@ namespace AFSInterview
 
         public Button start;
         public TextMeshProUGUI theEnd;
+        CameraShake cameraShake;
 
         private bool toggleFlag;
         void Start()
         {
+            cameraShake = FindObjectOfType<CameraShake>();
             ResetHP();
             toggleFlag = Random.Range(0, 2) == 0;
             SetupBattle();
@@ -105,6 +107,8 @@ namespace AFSInterview
                     int newHealth = health - damage;
 
                     army_02[attackEnemyIndex].health_points = Mathf.Max(0, newHealth);
+                    army_02[attackEnemyIndex].bloodSplash.Emit(15);
+                    cameraShake.StartShake();
                     // Logowanie informacji
                     Debug.Log(army_01[i].Name + " atakuje " + army_02[attackEnemyIndex].Name + " za " + damage + " obra¿eñ.");
 
@@ -137,6 +141,8 @@ namespace AFSInterview
 
                     int newHealth = health - damage;
                     army_01[attackEnemyIndex].health_points = Mathf.Max(0, newHealth);
+                    army_01[attackEnemyIndex].bloodSplash.Emit(15);
+                    cameraShake.StartShake();
                     // Logowanie informacji
                     Debug.Log(army_02[i].Name + " atakuje " + army_01[attackEnemyIndex].Name + " za " + damage + " obra¿eñ.");
 

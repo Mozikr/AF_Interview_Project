@@ -15,6 +15,7 @@ namespace AFSInterview
         public TextMeshProUGUI HP;
         private int roundsToWait = 0;
         public int health_points = 100;
+        public ParticleSystem bloodSplash;
 
         public bool CanAttack()
         {
