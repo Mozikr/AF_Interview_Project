@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: Catapult
   characterAttribute: 2
-  health_points: 100
   armor_points: 30
   attack_interval: 3
-  attack_damage: 40
+  attack_damage: 70

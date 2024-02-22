@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 namespace AFSInterview
 {
@@ -20,7 +21,7 @@ namespace AFSInterview
         private bool toggleFlag;
         void Start()
         {
-            cameraShake = FindObjectOfType<CameraShake>();
+            cameraShake = CameraShake.Instance;
             ResetHP();
             toggleFlag = Random.Range(0, 2) == 0;
             SetupBattle();

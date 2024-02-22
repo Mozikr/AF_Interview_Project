@@ -6,12 +6,27 @@ namespace AFSInterview
 {
     public class CameraShake : MonoBehaviour
     {
+        private static CameraShake instance;
+        public static CameraShake Instance => instance;
+
         public float shakeDuration = 0.5f;
         public float shakeMagnitude = 0.1f;
 
         public void StartShake()
         {
             StartCoroutine(Shake());
+        }
+        void Awake()
+        {
+            if (instance != null && instance != this)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
         }
 
         IEnumerator Shake()
