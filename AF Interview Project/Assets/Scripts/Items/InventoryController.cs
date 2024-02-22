@@ -1,16 +1,13 @@
 ﻿namespace AFSInterview.Items
 {
-    using System;
     using System.Collections.Generic;
     using UnityEngine;
-    using UnityEngine.UIElements;
 
     public class InventoryController : MonoBehaviour
     {
         [SerializeField] private List<InventoryItem> inventory;
         [SerializeField] private int money;
-        [SerializeField]
-        private Item[] allItems;
+        [SerializeField] private Item[] allItems;
         ItemsManager manager;
 
         public int Money => money;

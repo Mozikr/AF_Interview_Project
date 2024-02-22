@@ -110,7 +110,6 @@ namespace AFSInterview
                     army_02[attackEnemyIndex].health_points = Mathf.Max(0, newHealth);
                     army_02[attackEnemyIndex].bloodSplash.Emit(15);
                     cameraShake.StartShake();
-                    // Logowanie informacji
                     Debug.Log(army_01[i].Name + " atakuje " + army_02[attackEnemyIndex].Name + " za " + damage + " obra¿eñ.");
 
                     hero.Attack();
@@ -144,7 +143,6 @@ namespace AFSInterview
                     army_01[attackEnemyIndex].health_points = Mathf.Max(0, newHealth);
                     army_01[attackEnemyIndex].bloodSplash.Emit(15);
                     cameraShake.StartShake();
-                    // Logowanie informacji
                     Debug.Log(army_02[i].Name + " atakuje " + army_01[attackEnemyIndex].Name + " za " + damage + " obra¿eñ.");
 
                     hero.Attack();

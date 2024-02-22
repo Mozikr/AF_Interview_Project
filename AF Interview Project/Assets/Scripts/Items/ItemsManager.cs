@@ -9,7 +9,7 @@
         [SerializeField] private InventoryController inventoryController;
         [SerializeField] private int itemSellMaxValue;
         [SerializeField] private Transform itemSpawnParent;
-        [SerializeField] private GameObject itemPrefab;
+        [SerializeField] private GameObject[] itemPrefabs;
         [SerializeField] private BoxCollider itemSpawnArea;
         [SerializeField] private float itemSpawnInterval;
         [SerializeField] private TextMeshProUGUI moneyText;
@@ -19,14 +19,14 @@
 
         private void Start()
         {
-            // Inicjalizacja puli obiektów przy starcie
             InitializeObjectPool();
         }
 
         private void InitializeObjectPool()
         {
-            for (int i = 0; i < 10; i++) // Możesz dostosować ilość obiektów w puli
+            for (int i = 0; i < 10; i++)
             {
+                GameObject itemPrefab = itemPrefabs[Random.Range(0, itemPrefabs.Length)];
                 GameObject newItem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
                 newItem.SetActive(false);
                 itemPool.Add(newItem);
@@ -51,8 +51,6 @@
         private void SpawnNewItem()
         {
             nextItemSpawnTime = Time.time + itemSpawnInterval;
-
-            // Pobieranie obiektu z puli
             GameObject newItem = GetObjectFromPool();
 
             if (newItem != null)
@@ -78,9 +76,7 @@
 
             var item = itemHolder.GetItem(true);
             inventoryController.AddItem(item);
-            Debug.Log("Picked up " + item.Name + " with value of " + item.Value + " and now have " + inventoryController.ItemsCount + " inventory");
-
-            // Zwracanie obiektu do puli
+            //Debug.Log("Picked up " + item.Name + " with value of " + item.Value + " and now have " + inventoryController.ItemsCount + " inventory");
             ReturnObjectToPool(hit.collider.gameObject);
         }
 
@@ -92,7 +88,7 @@
                     return item;
             }
 
-            // Jeśli nie ma dostępnych obiektów w puli, możesz dodać nowy obiekt do puli
+            GameObject itemPrefab = itemPrefabs[Random.Range(0, itemPrefabs.Length)];
             GameObject newItem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
             newItem.SetActive(false);
             itemPool.Add(newItem);

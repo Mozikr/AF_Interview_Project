@@ -1,6 +1,5 @@
 ﻿namespace AFSInterview.Items
 {
-	using System;
 	using UnityEngine;
 
     [CreateAssetMenu]
