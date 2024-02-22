@@ -152,26 +152,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c6319dbe5584eacb6e3452a3a90017b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - name: Wooden shield
-    value: 90
-    type: 1
-  - name: Bow
-    value: 150
-    type: 1
-  - name: Mana Potion
-    value: 60
-    type: 2
-  - name: Sword
-    value: 130
-    type: 0
-  - name: Long Sword
-    value: 160
-    type: 2
-  - name: Plate Armor
-    value: 300
-    type: 0
+  inventory:
+  - item: {fileID: 11400000, guid: f2fd0c72b622b0747aab2bcb7c1f9fb4, type: 2}
+    Type: 0
+  - item: {fileID: 11400000, guid: f2fd0c72b622b0747aab2bcb7c1f9fb4, type: 2}
+    Type: 1
   money: 280
+  allItems:
+  - {fileID: 11400000, guid: f2fd0c72b622b0747aab2bcb7c1f9fb4, type: 2}
 --- !u!4 &117263
 Transform:
   m_ObjectHideFlags: 0
@@ -6603,7 +6591,7 @@ PrefabInstance:
     - target: {fileID: 5839321131171676426, guid: 7a041ce5ffd8bd84698911e0d6a09812,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

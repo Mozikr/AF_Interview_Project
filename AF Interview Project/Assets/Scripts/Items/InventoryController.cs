@@ -7,12 +7,14 @@
 
     public class InventoryController : MonoBehaviour
     {
-        [SerializeField] private List<Item> items;
+        [SerializeField] private List<InventoryItem> inventory;
         [SerializeField] private int money;
+        [SerializeField]
+        private Item[] allItems;
         ItemsManager manager;
 
         public int Money => money;
-        public int ItemsCount => items.Count;
+        public int ItemsCount => inventory.Count;
 
         private void Start()
         {
@@ -21,32 +23,32 @@
         }
         public void SellAllItemsUpToValue(int maxValue)
         {
-            for (var i = 0; i < items.Count; i++)
+            for (var i = 0; i < inventory.Count; i++)
             {
-                var itemValue = items[i].Value;
+                var itemValue = inventory[i].item.Value;
                 if (itemValue > maxValue)
                     continue;
 
                 money += itemValue;
                 manager.SetMoneyString();
-                items.RemoveAt(i);
+                inventory.RemoveAt(i);
             }
         }
 
         public void UseItem()
         {
-            for (int i = 0; i < items.Count; i++)
+            for (int i = 0; i < inventory.Count; i++)
             {
-                var itemToUse = items[i];
+                var itemToUse = inventory[i];
                 itemToUse.Use(this);
 
-                if (itemToUse.Type == Item.ItemType.DoNothing)
+                if (itemToUse.Type == InventoryItem.ItemType.DoNothing)
                 {
                     continue;
                 }
                 else
                 {
-                    items.RemoveAt(i);
+                    inventory.RemoveAt(i);
                     manager.SetMoneyString();
                     break;
                 }
@@ -67,7 +69,7 @@
 
         public void AddItem(Item item)
           {
-                items.Add(item);
+                inventory.Add(new InventoryItem(item,InventoryItem.ItemType.DoNothing));
           }
         }
-    }
+}
